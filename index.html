@@ -170,21 +170,9 @@
             }
 
             function tiempo(x) {
-                var unix = x;
-                var dato = new Date(unix);
-                const date = new Date();
-                const [month, day, year] = [
-                date.getMonth(),
-                date.getDate(),
-                date.getFullYear(),
-                ];
-                const [hour, minutes, seconds] = [
-                date.getHours(),
-                date.getMinutes(),
-                date.getSeconds(),
-                ];
-                return dato.toISOString();
-            }
+            const fecha = new Date(x);
+            return fecha.toLocaleString("es-CL");
+}
 
             function tsunami(x) {
                 var mensaje = "<span>Sin alerta</span>";
